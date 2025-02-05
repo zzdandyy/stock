@@ -299,12 +299,7 @@ class StockScreener:
                 increasing_line_color='#ff7f7f',
                 decreasing_line_color='#7fbf7f',
                 hovertext=[
-                    f'日期: {date:%Y-%m-%d}<br>' +
-                    f'开盘: {open:.2f}<br>' +
-                    f'最高: {high:.2f}<br>' +
-                    f'最低: {low:.2f}<br>' +
-                    f'收盘: {close:.2f}<br>' +
-                    f'涨跌幅: {pct_change:+.2f}%'
+                    f'update: {pct_change:+.2f}%'
                     for date, open, high, low, close, pct_change in zip(
                         _stock_data['trade_date'],
                         _stock_data['open'],
